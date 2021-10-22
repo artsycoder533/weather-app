@@ -1,0 +1,1 @@
+const URL = 'http://api.openweathermap.org/data/2.5/weather?q=Richmond&APPID=e3a62ee996e2dfe8059942823c005091';
