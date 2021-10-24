@@ -7,12 +7,18 @@ window.addEventListener("DOMContentLoaded", () => {
 
 const showWeather = async (url) => {
     //const data = await fetchWeather(url);
+    const img = document.getElementById("logo");
+    
     try {
         const response = await fetch(url);
         const data = await response.json();
         console.log(data);
-        const { temp_max: high, temp_low: low} = data.main;
-        console.log(low, high)
+        const { temp, temp_max: max, temp_min: min } = data.main;
+        //const { icon } = data.weather;
+        console.log(data.weather[0].icon);
+        //img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+
+        console.log(img.src);
         return data;
     } catch (error) {
         console.log(error);
