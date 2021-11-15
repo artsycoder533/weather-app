@@ -4,11 +4,63 @@
     padding: 0;
 }
 
+.container {
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    height: 100vh;
+    width: 100vw;
+}
+
 .container__search {
     display: flex;
     justify-content: center;
 }
 
 .location {
-    padding: 0.5rem;
+    padding: 0.3rem;
 }
+
+.temp {
+    font-size: 3rem;
+}
+
+.weather, .img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.description {
+    text-transform: capitalize;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.deg {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.active {
+    border: 2px solid black;
+}
+
+.visible {
+    display: flex;
+}
+
