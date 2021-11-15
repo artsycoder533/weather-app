@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container__search {
+    display: flex;
+    justify-content: center;
+}
+
+.location {
+    padding: 0.5rem;
+}
