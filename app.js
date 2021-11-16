@@ -60,7 +60,6 @@ const currentWeather = async (loc, units) => {
         document.querySelector(".weather").innerHTML = "";
         clearInput();
     }
-    // document.querySelector(".location").value = "";
 }
 
 const showWeather = async (loc, units) => {
@@ -103,7 +102,6 @@ const showWeather = async (loc, units) => {
         document.querySelector(".weather").innerHTML = "";
         clearInput();
     }
-    // document.querySelector(".location").value = "";
 }
 
 function getCelcius(e) {
@@ -139,7 +137,7 @@ btn.addEventListener("click", () => {
     const error = document.querySelector(".error");
     const fahrenheit = document.getElementById("fahrenheit").classList.add("active");
     const regex = /[^$|\d|\s{2}*]/ig;
-    if (loc.match(/^\s$/) || loc.match(/\d/) || loc.match(/\s{2,}/)) {
+    if (loc.match(/^\s$/) || loc.match(/^$/) || loc.match(/\d/) || loc.match(/\s{2,}/)) {
         error.textContent = "Enter a valid city!";
         setTimeout(() => {
             error.textContent = "";
