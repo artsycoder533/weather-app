@@ -35,7 +35,8 @@ body {
     color: white;
     margin-top: 1rem;
     cursor: pointer;
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
 }
 
 .btn:hover{
@@ -50,7 +51,8 @@ body {
     margin-top: 1rem;
     width: 90vw;
     max-width: 500px;
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
 }
 
 .buttons {
@@ -61,7 +63,8 @@ body {
 .card {
     border-radius: 1rem;
     background: transparent;
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     display: grid;
     place-items: center;
     padding: 1rem;
@@ -118,7 +121,8 @@ h2 {
 
 .current {
     background: transparent;
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     color: white;
     font-weight: bold;
     display: grid;
@@ -135,6 +139,22 @@ h2 {
     font-size: 1.5rem;
 }
 
+::-webkit-input-placeholder {
+    color: white;
+}
+
+::-moz-placeholder {
+    color: white;
+}
+
+:-ms-input-placeholder {
+    color: white;
+}
+
+::-ms-input-placeholder {
+    color: white;
+}
+
 ::placeholder {
     color: white;
 }
@@ -144,5 +164,6 @@ h2 {
     text-align: center;
     font-weight: bold;
     background: transparent;
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
 }
