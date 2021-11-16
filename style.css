@@ -53,6 +53,11 @@ body {
     backdrop-filter: blur(10px);
 }
 
+.buttons {
+    text-align: center;
+    visibility: hidden;
+}
+
 .card {
     border-radius: 1rem;
     background: transparent;
@@ -91,17 +96,24 @@ h2 {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    border: none;
+    border: 2px solid black;
     font-size: 1.5rem;
     cursor: pointer;
+    padding: 0.25rem;
+}
+
+.deg:hover {
+    border: 2px solid red;
 }
 
 .active {
-    border: 2px solid black;
+    border: 2px solid white;
+    background: black;
+    color: white;
 }
 
 .visible {
-    display: flex;
+    visibility: visible;
 }
 
 .current {
