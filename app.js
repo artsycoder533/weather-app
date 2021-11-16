@@ -29,7 +29,7 @@ const currentWeather = async (loc, units) => {
     else if (units === "imperial") {
         degree = "&deg;F";
     }
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=e3a62ee996e2dfe8059942823c005091&units=${units}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=e3a62ee996e2dfe8059942823c005091&units=${units}`;
     const btns = document.querySelector(".buttons");
     try {
         const response = await fetch(url);
@@ -50,7 +50,7 @@ const currentWeather = async (loc, units) => {
             <small>Weather as of ${date.toLocaleTimeString()}</small>
             <p class="description">${main}</p>
             <p class="temp">${Math.round(temp)}${degree}</p>
-            <img src="http://openweathermap.org/img/wn/${icon}@2x.png"></img>
+            <img src="https://openweathermap.org/img/wn/${icon}@2x.png"></img>
             <p>${weekday}, ${month} ${day}</p>
         `;
         document.querySelector(".current").innerHTML = output;
@@ -71,7 +71,7 @@ const showWeather = async (loc, units) => {
     } else if (units === "imperial") {
         degree = "&deg;F";
     }
-    const url = `http://api.openweathermap.org/data/2.5/forecast?q=${loc}&appid=e3a62ee996e2dfe8059942823c005091&units=${units}`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${loc}&appid=e3a62ee996e2dfe8059942823c005091&units=${units}`;
     console.log(url);
     try {
         const response = await fetch(url);
