@@ -4,35 +4,75 @@
     padding: 0;
 }
 
+body {
+    background: url("./background.jpg") no-repeat center/cover;
+}
+
 .container {
-    border: 2px solid green;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    width: 90vw;
+    margin: 0 auto;
 }
+
 
 .container__search {
     display: flex;
     justify-content: center;
 }
 
+.btn {
+    text-transform: uppercase;
+    padding: 0.5rem;
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    margin-top: 1rem;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+
+.btn:hover{
+    border: 2px solid red;
+}
+
 .location {
     padding: 0.3rem;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    margin-top: 1rem;
+    width: 90vw;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+}
+
+.card {
+    border-radius: 1rem;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
 }
 
 .temp {
     font-size: 3rem;
 }
 
-.weather, .img {
-    display: flex;
-    flex-direction: column;
+.weather {
+    display: grid;
+    /* grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) ); */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
     justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .description {
@@ -64,3 +104,33 @@ h2 {
     display: flex;
 }
 
+.current {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    color: white;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 90vw;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+.city {
+    font-size: 1.5rem;
+}
+
+::placeholder {
+    color: white;
+}
+
+.error {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
